@@ -1,19 +1,15 @@
 using System;
+using DG.Tweening;
 using Tank.Runtime;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace HUD.Runtime
 {
     public class SpatialHealthBar : MonoBehaviour
     {
-    	#region Public Members
-
-
-        #endregion
-
-        
-    	#region Unity API
+	    #region Unity API
 
         private void Start()
         {
@@ -45,6 +41,9 @@ namespace HUD.Runtime
 	        _deltaFill = 0;
 
 	        _isRespawning = false;
+
+	        _healthBarFill.transform.DOShakeRotation(_shakeDuration, Vector3.one * _rotationStrength);
+	        _healthBarFill.transform.DOShakePosition(_shakeDuration, Vector3.one * _positionStrength);
         }
 
         private void OnRespawnEventHandler(object sender, EventArgs e)
@@ -58,12 +57,7 @@ namespace HUD.Runtime
         }
         
     	#endregion
-
         
-    	#region Utils
-
-    	#endregion
-
         
     	#region Private and Protected Members
 
@@ -71,11 +65,19 @@ namespace HUD.Runtime
         [SerializeField] private Image _healthBarFill;
         
         [Space]
+        [Header("Fill")]
         [Range(0.01f, 2f)]
         [SerializeField] private float _fillDuration = 1f;
         [Range(0.01f, 10f)]
         [SerializeField] private float _fillDurationRespawning = 3f;
         [SerializeField] private AnimationCurve _fillAnimationCurve;
+        
+        [Header("Shake")]
+        [SerializeField]private float _positionStrength;
+        [Tooltip("In degrees")]
+        [SerializeField]private float _rotationStrength;
+        [Range(0.01f,1f)]
+        [SerializeField]private float _shakeDuration;
 
         private int _tankMaxHealth;
         
