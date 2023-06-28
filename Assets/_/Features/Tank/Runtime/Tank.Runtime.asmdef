@@ -1,0 +1,14 @@
+{
+    "name": "Tank.Runtime",
+    "rootNamespace": "Tank.Runtime",
+    "references": ["GUID:200a84ad0e80c1e4d81cc160de46391e","GUID:30817c1a0e6d646d99c048fc403f5979","GUID:fdb84ad1bf3ec1d4392fd37a277edbf8"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
