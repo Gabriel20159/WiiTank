@@ -5,7 +5,7 @@ using Utils.Runtime;
 
 namespace HUD.Runtime
 {
-    public class DisplayTimer : Timer
+    public class DisplayTime : TimerBehaviour
     {
         #region Unity API
 

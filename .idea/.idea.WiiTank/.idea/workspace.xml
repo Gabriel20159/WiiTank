@@ -5,37 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="390f3ae7-9c6e-4beb-8870-66d44460b09f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/CustomNetworkManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/CustomNetworkManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/Tank.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/Tank.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/TankDamager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/TankDamager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/Resources/DOTweenSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Extra/Typewriter Sound - Package.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Integrations/PlayMaker - Integration.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Integrations/Visual Scripting - Integration.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Mirror/Core/NetworkIdentity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Mirror/Core/NetworkIdentity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/Ball.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/Ball.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/DottedLine.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/DottedLine.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/Racket.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/Racket.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/WallHorizontal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/WallHorizontal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/WallVertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Mirror/Examples/Pong/Sprites/WallVertical.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/GameManagerFeature.Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/GameManagerFeature.Runtime.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/ScoreManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/ScoreManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/SpawnAnchor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/SpawnAnchor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiTank/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiTank/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/PlayersProfilesDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/GameManager/Runtime/PlayersProfilesDataBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_/Features/HUD/Runtime/DisplayTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/HUD/Runtime/DisplayTime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_/Features/HUD/Runtime/DisplayTimer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/HUD/Runtime/DisplayTime.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_/Features/HUD/Runtime/HUD.Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/HUD/Runtime/HUD.Runtime.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/HUD/Runtime/TankScoreHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/HUD/Runtime/TankScoreHUD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/Shell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/Shell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/TankExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/TankExplosion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/TankHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/TankHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/TankScore.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Features/Tank/Runtime/TankScore.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Levels/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/Levels/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_/Features/Utils/Runtime/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/Utils/Runtime/TimerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_/Features/Utils/Runtime/Timer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Features/Utils/Runtime/TimerBehaviour.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_/Levels/Remi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/Levels/Remi.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WiiTank.sln.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/WiiTank.sln.DotSettings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +26,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/7c/19345b12/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/ce/c2d080cb/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_/Features/Utils/Runtime/Timer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2RpBo9nG7p8K3fHAO2bXEiKi0vq" />
   <component name="ProjectViewState">
@@ -128,7 +107,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687937317161</updated>
-      <workItem from="1687937321484" duration="15790000" />
+      <workItem from="1687937321484" duration="19619000" />
     </task>
     <servers />
   </component>

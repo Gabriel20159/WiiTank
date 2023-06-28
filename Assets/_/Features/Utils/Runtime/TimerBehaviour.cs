@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Utils.Runtime
 {
-    public class Timer : MonoBehaviour
+    public class TimerBehaviour : MonoBehaviour
     {
         #region Public Members
 
@@ -31,9 +31,6 @@ namespace Utils.Runtime
 
             switch (_currentState)
             {
-                case State.Inactive:
-                    break;
-
                 case State.Start:
                     _currentTime = MaxTimer;
                     m_onTimerStart?.Invoke(this, EventArgs.Empty);
@@ -65,7 +62,7 @@ namespace Utils.Runtime
 
         #region Main Methods
 
-        //  Can start/restart with a delay
+        // Can start/restart with a delay
         public void StartTimer(float duration, float timeToWaitBeforeStart = 0)
         {
             if (timeToWaitBeforeStart > 0)
