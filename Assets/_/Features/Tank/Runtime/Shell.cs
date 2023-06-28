@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Tank.Runtime
 {
-    public class Shell : MonoBehaviour
+    public class Shell : TankDamager
     {
     	#region Public Members
 
@@ -11,18 +11,6 @@ namespace Tank.Runtime
         {
 	        get => _speed;
 	        set => _speed = value;
-        }
-
-        public int Damage
-        {
-	        get => _damage;
-	        set => _damage = value;
-        }
-
-        public TankShooting Source
-        {
-	        get => _source;
-	        set => _source = value;
         }
 
         #endregion
@@ -42,7 +30,7 @@ namespace Tank.Runtime
 		        return;
 	        }
 	        
-	        other.GetComponent<TankHealth>().TakeDamage(_damage);
+	        other.GetComponent<TankHealth>().TakeDamage(this);
 	        Die();
         }
 
@@ -66,10 +54,7 @@ namespace Tank.Runtime
 
         [SerializeField] private GameObject _hitVFX;
         
-        private int _damage;
         private float _speed;
-
-        private TankShooting _source;
 
         #endregion
 

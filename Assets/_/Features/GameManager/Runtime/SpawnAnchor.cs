@@ -17,8 +17,6 @@ namespace GameManagerFeature.Runtime
         {
 	        if (!other.CompareTag("Player")) return;
 	        
-	        Debug.Log("Added Player");
-	        
 	        PlayersInContact.Add(other);
         }
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Tank.Runtime
 {
-    public class TankExplosion : MonoBehaviour
+    public class TankExplosion : TankDamager
     {
     	#region Public Members
 
@@ -12,8 +12,9 @@ namespace Tank.Runtime
         private void OnTriggerEnter2D(Collider2D other)
         {
 	        if (!other.CompareTag("Player"))return;
-	        
-	        other.GetComponent<TankHealth>().TakeDamage(_damage);
+
+	        _damage = 1000;
+	        other.GetComponent<TankHealth>().TakeDamage(this);
         }
     	#endregion
 
@@ -26,8 +27,6 @@ namespace Tank.Runtime
     	#endregion
 
     	#region Private and Protected Members
-
-        [SerializeField] private int _damage;
 
         #endregion
     }

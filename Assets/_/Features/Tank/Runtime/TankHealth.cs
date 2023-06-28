@@ -1,8 +1,7 @@
-//usingRemi
-
 using System;
 using System.Collections;
 using GameManagerFeature.Runtime;
+using Mirror;
 using UnityEngine;
 
 namespace Tank.Runtime
@@ -12,7 +11,7 @@ namespace Tank.Runtime
         public int Health { get; set; }
     }
     
-    public class TankHealth : MonoBehaviour
+    public class TankHealth : NetworkBehaviour
     {
         #region Public Members
 
@@ -63,7 +62,7 @@ namespace Tank.Runtime
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space)) TakeDamage(1000);
+            //if (Input.GetKeyDown(KeyCode.Space)) TakeDamage(1000);
         }
 
         #endregion
@@ -71,20 +70,21 @@ namespace Tank.Runtime
         
         #region Main Methods
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(TankDamager damager)
         {
             if (IsInvincible) return;
             
-            CurrentHealth -= damage;
+            CurrentHealth -= damager.Damage;
             if (CurrentHealth < 0) CurrentHealth = 0;
             
             m_onHealthChanged?.Invoke(this, new OnHealthChangedEventArgs { Health = CurrentHealth });
             
-            if (CurrentHealth <= 0) Die();
+            if (CurrentHealth <= 0) Die(damager);
         }
 
-        private void Die()
+        private void Die(TankDamager tankDamager)
         {
+            ScoreManager.Instance.IncrementKillCount();
             Instantiate(_dieVFX, transform.position, Quaternion.identity);
             SpawnManager.Instance.Respawn(transform);
         }

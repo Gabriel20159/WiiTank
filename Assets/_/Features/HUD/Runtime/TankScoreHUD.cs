@@ -1,5 +1,4 @@
-﻿using System;
-using Tank.Runtime;
+﻿using GameManagerFeature.Runtime;
 using TMPro;
 using UnityEngine;
 
@@ -9,11 +8,14 @@ namespace HUD.Runtime
     {
         #region Unity API
 
-        private void Update()
+        private void OnEnable()
         {
-            if (_tankScore is not null) return;
+            ScoreManager.Instance.m_onKillCountChanged += OnKillCountChanged;
+        }
 
-            TankScore.Instance.m_onKillCountChanged += OnKillCountChanged;
+        private void OnDisable()
+        {
+            ScoreManager.Instance.m_onKillCountChanged -= OnKillCountChanged;
         }
 
         #endregion
@@ -30,9 +32,7 @@ namespace HUD.Runtime
         #region Private and Protected Members
 
         [SerializeField] private TextMeshProUGUI _killCountText;
-
-        private TankScore _tankScore;
-
+        
         #endregion
     }
 }
