@@ -46,7 +46,9 @@ namespace GameManagerFeature.Runtime
 	        yield return new WaitForSeconds(_timeBeforeSpawn);
 	        
 	        transformToRespawn.gameObject.SetActive(true);
-	        transformToRespawn.position = GetAvailableSpawnAnchor().transform.position;
+	        Transform spawnAnchor = GetAvailableSpawnAnchor().transform;
+	        transformToRespawn.position = spawnAnchor.position;
+	        transformToRespawn.rotation = spawnAnchor.rotation;
         }
 
         private SpawnAnchor GetAvailableSpawnAnchor()

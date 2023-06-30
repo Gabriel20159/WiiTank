@@ -59,7 +59,7 @@ namespace Tank.Runtime
 	        var shell = currentShell.GetComponent<Shell>();
 	        shell.Speed = _bulletSpeed;
 	        shell.Damage = _shellDamage;
-	        shell.Source = this;
+	        shell.SourceDamage = GetComponent<Tank>();
 	        
 	        StartCoroutine(HandleCooldown(_shootingCooldown));
         }

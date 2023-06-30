@@ -1,4 +1,8 @@
-﻿using Mirror;
+﻿using System.Collections;
+using System.Threading.Tasks;
+using GameManagerFeature.Runtime;
+using Mirror;
+using UnityEngine;
 
 namespace Tank.Runtime
 {
@@ -6,7 +10,13 @@ namespace Tank.Runtime
     {
         private void Awake()
         {
-            
+            StartCoroutine(UpdateLeaderboard());
+        }
+
+        private IEnumerator UpdateLeaderboard()
+        {
+            yield return new WaitForSeconds(0.1f);
+            LeaderboardManager.Instance.UpdateLeaderboard();
         }
     }
 }

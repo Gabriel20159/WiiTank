@@ -1,4 +1,6 @@
-﻿using GameManagerFeature.Runtime;
+﻿using System;
+using Mirror;
+using Tank.Runtime;
 using TMPro;
 using UnityEngine;
 
@@ -10,12 +12,30 @@ namespace HUD.Runtime
 
         private void OnEnable()
         {
-            ScoreManager.Instance.m_onKillCountChanged += OnKillCountChanged;
+            if (_tankScore is null) return;
+            
+            _tankScore.m_onKillCountChanged += OnKillCountChanged;
         }
 
         private void OnDisable()
         {
-            ScoreManager.Instance.m_onKillCountChanged -= OnKillCountChanged;
+            _tankScore.m_onKillCountChanged -= OnKillCountChanged;
+        }
+
+        private void Start()
+        {
+            OnKillCountChanged(this, 0);
+        }
+
+        private void Update()
+        {
+            if (_tankScore is not null) return;
+            
+            NetworkIdentity tankIdentity = NetworkClient.localPlayer;
+            if (tankIdentity is null) return;
+            
+            _tankScore = tankIdentity.GetComponentInChildren<TankScore>();
+            _tankScore.m_onKillCountChanged += OnKillCountChanged;
         }
 
         #endregion
@@ -24,7 +44,7 @@ namespace HUD.Runtime
 
         private void OnKillCountChanged(object sender, int e)
         {
-            _killCountText.text = $"{e}";
+            _killCountText.text = $"Kills: {e}";
         }
 
         #endregion
@@ -32,7 +52,9 @@ namespace HUD.Runtime
         #region Private and Protected Members
 
         [SerializeField] private TextMeshProUGUI _killCountText;
-        
+
+        private TankScore _tankScore;
+
         #endregion
     }
 }

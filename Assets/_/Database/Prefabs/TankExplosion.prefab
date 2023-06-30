@@ -48,7 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16aafbb1cd83cfb4da3f7bbe5d50743e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10000
 --- !u!198 &3464422157408920967
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4954,7 +4953,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.010836363, y: 0.05009979}

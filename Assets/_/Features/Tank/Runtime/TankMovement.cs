@@ -20,7 +20,7 @@ namespace Tank.Runtime
 	        CameraFocusPoint.Instance.Player = transform;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
 	        if (!isOwned) return;
 	        

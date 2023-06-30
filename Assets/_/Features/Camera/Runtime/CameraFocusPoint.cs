@@ -38,10 +38,9 @@ namespace CameraGame.Runtime
 
         private void Update()
         {
-            if (_player is null) return;
+            if (Player is null || !Application.isFocused) return;
             
-            Vector3 mouseScreenPosition = Input.mousePosition;
-            Vector3 worldPosition = _camera.ScreenToWorldPoint(mouseScreenPosition);
+            Vector3 worldPosition = _camera.ScreenToWorldPoint(GetMousePosition());
 
             Vector3 target = new Vector3(
                 worldPosition.x + (Player.position.x - worldPosition.x) / 4 * 3,
@@ -54,6 +53,16 @@ namespace CameraGame.Runtime
         #endregion
 
         #region Main Methods
+
+        private Vector3 GetMousePosition()
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            if (mousePosition.x > Screen.width) mousePosition.x = Screen.width;
+            if (mousePosition.x < 0) mousePosition.x = 0;
+            if (mousePosition.y > Screen.height) mousePosition.y = Screen.height;
+            if (mousePosition.y < 0) mousePosition.y = 0;
+            return mousePosition;
+        }
 
         #endregion
 

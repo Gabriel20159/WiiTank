@@ -2,7 +2,6 @@ using System;
 using DG.Tweening;
 using Tank.Runtime;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace HUD.Runtime
@@ -42,12 +41,17 @@ namespace HUD.Runtime
 
 	        _isRespawning = false;
 
-	        _healthBarFill.transform.DOShakeRotation(_shakeDuration, Vector3.one * _rotationStrength);
-	        _healthBarFill.transform.DOShakePosition(_shakeDuration, Vector3.one * _positionStrength);
+	        DoTweenSequenceReset();
+
+	        _sequence = DOTween.Sequence();
+	        _sequence.Append(_healthBarFill.transform.DOShakeRotation(_shakeDuration, Vector3.one * _rotationStrength));
+	        _sequence.Insert(0, _healthBarFill.transform.DOShakePosition(_shakeDuration, Vector3.one * _positionStrength));
         }
 
         private void OnRespawnEventHandler(object sender, EventArgs e)
         {
+	        DoTweenSequenceReset();
+	        
 	        _oldFill = 0;
 	        _targetFill = 1;
 
@@ -58,6 +62,16 @@ namespace HUD.Runtime
         
     	#endregion
         
+        #region Utils
+
+        private void DoTweenSequenceReset()
+        {
+	        _sequence?.Kill();
+	        _healthBarFill.rectTransform.localPosition = Vector3.zero;
+	        _healthBarFill.rectTransform.localRotation = Quaternion.identity;
+        }
+        
+        #endregion
         
     	#region Private and Protected Members
 
@@ -85,6 +99,8 @@ namespace HUD.Runtime
         private float _oldFill;
         private float _targetFill = 1;
         private float _deltaFill;
+
+        private Sequence _sequence;
 
         #endregion
     }

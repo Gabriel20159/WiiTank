@@ -12,10 +12,10 @@ namespace Tank.Runtime
             set => _damage = value;
         }
 
-        public TankShooting Source
+        public Tank SourceDamage
         {
-            get => _source;
-            set => _source = value;
+            get => sourceDamage;
+            set => sourceDamage = value;
         }
 
         #endregion
@@ -24,7 +24,7 @@ namespace Tank.Runtime
         
         protected int _damage;
 
-        protected TankShooting _source;
+        protected Tank sourceDamage;
 
         #endregion
     }

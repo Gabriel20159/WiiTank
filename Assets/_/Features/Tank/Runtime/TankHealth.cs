@@ -62,7 +62,10 @@ namespace Tank.Runtime
 
         private void Update()
         {
-            //if (Input.GetKeyDown(KeyCode.Space)) TakeDamage(1000);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                TakeDamage(null);
+            }
         }
 
         #endregion
@@ -74,19 +77,26 @@ namespace Tank.Runtime
         {
             if (IsInvincible) return;
             
-            CurrentHealth -= damager.Damage;
+            CurrentHealth -= damager is null ? 1000 : damager.Damage;
+            
             if (CurrentHealth < 0) CurrentHealth = 0;
             
             m_onHealthChanged?.Invoke(this, new OnHealthChangedEventArgs { Health = CurrentHealth });
-            
+
             if (CurrentHealth <= 0) Die(damager);
         }
 
         private void Die(TankDamager tankDamager)
         {
-            ScoreManager.Instance.IncrementKillCount();
-            Instantiate(_dieVFX, transform.position, Quaternion.identity);
+            if (tankDamager is not null)
+            {
+                tankDamager.SourceDamage.GetComponent<TankScore>().IncrementKillCount();
+            }
+            Instantiate(_dieVFX, transform.position, Quaternion.identity).GetComponent<TankDamager>().SourceDamage = GetComponent<Tank>();
+            
             SpawnManager.Instance.Respawn(transform);
+            
+            LeaderboardManager.Instance.UpdateLeaderboard();
         }
 
         private void Spawn()
